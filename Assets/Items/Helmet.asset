@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b18558e895dd964db8f35813a04f486, type: 3}
-  m_Name: TestItem
+  m_Name: Helmet
   m_EditorClassIdentifier: 
   name: Helmet of Protection
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 3828a38dc932bda4badac092b99f370a, type: 3}
   isDefaultItem: 0

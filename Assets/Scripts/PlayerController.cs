@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerMotor))] // Making sure Unity will always add a PlayerMotor whenever the PlayerController component is used
 public class PlayerController : MonoBehaviour
@@ -19,7 +18,11 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        if (EventSystem.current.IsPointerOverGameObject()){ // check if we are currently hovering over UI
+            return;
+        }
+
         // Left-click for movement
         if (Input.GetMouseButtonDown(0)){
             Ray ray = cam.ScreenPointToRay(Input.mousePosition); // casting a ray from a point on the screen ie the mouse position

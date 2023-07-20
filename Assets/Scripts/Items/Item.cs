@@ -9,7 +9,11 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public bool isDefaultItem = false; // determines if the item is a default for the player
 
-    // Modifiers
+    // Use item
+    public virtual void Use ()
+    {
+        Debug.Log("Using " + name);
+    }
 
 
 }
